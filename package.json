@@ -1,18 +1,18 @@
 {
-  "name": "express-template",
+  "name": "Michanoku Message Board",
   "version": "1.0.0",
-  "description": "Node Express Template For Coding Practice",
+  "description": "The Odin Project Mini Message Board",
   "keywords": [
     "Node",
     "Express"
   ],
-  "homepage": "https://github.com/Michanoku/node-express-template#readme",
+  "homepage": "https://github.com/Michanoku/odin-messageboard#readme",
   "bugs": {
-    "url": "https://github.com/Michanoku/node-express-template/issues"
+    "url": "https://github.com/Michanoku/odin-messageboard/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Michanoku/node-express-template.git"
+    "url": "git+https://github.com/Michanoku/odin-messageboard.git"
   },
   "license": "MIT",
   "author": "Michanoku",
