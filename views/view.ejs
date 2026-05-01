@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/head') %>
+
+<body>
+  <%- include('partials/header') %>
+  <main>
+    <h2>Message Details</h2>
+    <div class="message">
+      <div class="content">
+        <div>User: <%= message.user %></div>
+        <div>Date: <%= message.added %></div>
+        <div>Message: <%= message.text %></div>
+      </div>
+    </div>
+  </main>
+  <%- include('partials/footer') %>
+</body>
+
+</html>
