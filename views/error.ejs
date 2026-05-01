@@ -3,9 +3,12 @@
 <%- include('partials/head') %>
 
 <body>
-  <div><%= errorTitle %></div>
-  <div><%= errorMessage %></div>
-  <%- include('partials/footer') %>
+  <main>
+    <%- include('partials/header') %>
+    <h2><%= errorTitle %></h2>
+    <div><%= errorMessage %></div>
+    <%- include('partials/footer') %>
+  </main>
 </body>
 
 </html>

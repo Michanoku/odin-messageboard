@@ -3,14 +3,21 @@
 <%- include('partials/head') %>
 
 <body>
-  <div>Index</div>
-  <% messages.forEach((message) => { %>
-    <div>
-      <div>User: <%= message.user %></div>
-      <div>Date: <%= message.added %></div>
-      <div>Message: <%= message.text %></div>
+  <%- include('partials/header') %>
+  <main>
+    <h2>Index</h2>
+    <a href="/new" class="newMessage">New message</a>
+    <% messages.forEach((message) => { %>
+    <div class="message">
+      <div class="content">
+        <div>User: <%= message.user %></div>
+        <div>Date: <%= message.added %></div>
+        <div>Message: <%= message.text %></div>
+      </div>
+      <a href="/message/<%= message.id %>" class="viewMessage">View</a>
     </div>
-  <% }) %>
+    <% }) %>
+  </main>
   <%- include('partials/footer') %>
 </body>
 
