@@ -8,7 +8,8 @@
   margin: 0;
 }
 
-input {
+input,
+textarea {
   border: none;
   outline: none;
   background: transparent;
@@ -16,6 +17,78 @@ input {
 }
 
 body {
-  background-color: #f5f5f5;
+  background-color: #d1d5de;
   color: #1e1e1e;
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  border-bottom: 1px solid #1e1e1e80;
+}
+
+main {
+  padding: 1rem;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  margin-top: auto;
+  padding: 0.5rem;
+}
+
+h2 {
+  margin-bottom: 1.5rem;
+}
+
+.newMessage {
+  display: block;
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.message {
+  background-color: #b7b6c2;
+  border-radius: 0.375rem;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.viewMessage {
+  font-size: 1.25rem;
+  padding: 0.5rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form > input,
+form > textarea {
+  font-size: 1.125rem;
+  padding: 0.5rem;
+  background-color: #f5f5f5;
+  border-radius: 0.375rem;
+  border: 1px solid #1e1e1e80;
+  margin-bottom: 1rem;
+}
+
+form button {
+  font-size: 1.25rem;
+  padding: 0.5rem 0.375em;
+  cursor: pointer;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
 }
