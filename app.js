@@ -4,7 +4,7 @@ const compression = require("compression");
 const morgan = require("morgan");
 const path = require("path");
 
-const indexRoutes = require("./routes/index");
+const pageRoutes = require("./routes/page");
 
 const app = express();
 
@@ -23,7 +23,7 @@ app.use(express.json());
 // Static files
 app.use(express.static(path.join(__dirname, "public")));
 
-app.use("/", indexRoutes);
+app.use("/", pageRoutes);
 
 // 404
 app.use((req, res) => {

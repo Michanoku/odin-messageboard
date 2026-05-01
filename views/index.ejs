@@ -4,6 +4,13 @@
 
 <body>
   <div>Index</div>
+  <% messages.forEach((message) => { %>
+    <div>
+      <div>User: <%= message.user %></div>
+      <div>Date: <%= message.added %></div>
+      <div>Message: <%= message.text %></div>
+    </div>
+  <% }) %>
   <%- include('partials/footer') %>
 </body>
 
