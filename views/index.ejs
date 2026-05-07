@@ -10,9 +10,9 @@
     <% messages.forEach((message) => { %>
     <div class="message">
       <div class="content">
-        <div>User: <%= message.user %></div>
+        <div>User: <%= message.username %></div>
         <div>Date: <%= message.added %></div>
-        <div>Message: <%= message.text %></div>
+        <div>Message: <%= message.message %></div>
       </div>
       <a href="/message/<%= message.id %>" class="viewMessage">View</a>
     </div>

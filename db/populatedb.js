@@ -7,7 +7,7 @@ CREATE TABLE IF NOT EXISTS messages (
   id INTEGER PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
   username VARCHAR ( 255 ),
   message TEXT,
-  added TIMESTAMP WITH TIME ZONE DEFAULT now(),
+  added TIMESTAMP WITH TIME ZONE DEFAULT now()
 );
 
 INSERT INTO messages (username, message) 

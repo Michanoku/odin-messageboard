@@ -1,19 +1,8 @@
-const messages = [
-  {
-    id: crypto.randomUUID(),
-    text: "Hi there!",
-    user: "Amando",
-    added: new Date(),
-  },
-  {
-    id: crypto.randomUUID(),
-    text: "Hello World!",
-    user: "Charles",
-    added: new Date(),
-  },
-];
+const db = require("../db/queries");
 
-const getIndex = (req, res) => {
+
+const getIndex = async (req, res) => {
+  const messages = await db.getAllMessages();
   res.render("index", { title: "Express Template", messages: messages });
 };
 
