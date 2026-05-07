@@ -6,6 +6,7 @@
   <%- include('partials/header') %>
   <main>
     <h2>Add New Message</h2>
+    <%- include("partials/errors.ejs") %>
     <form method="post" action="/new">
       <input type="text" id="user" name="username" placeholder="Username">
       <textarea rows="3" id="text" name="message" placeholder="Message"></textarea>
