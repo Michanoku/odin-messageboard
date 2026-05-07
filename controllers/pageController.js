@@ -10,19 +10,14 @@ const getNewMessage = (req, res) => {
   res.render("form", { title: "Add New Message" });
 };
 
-const postNewMessage = (req, res) => {
+const postNewMessage = async (req, res) => {
   const message = req.body;
-  messages.push({
-    id: crypto.randomUUID(),
-    text: message.text,
-    user: message.user,
-    added: new Date(),
-  });
+  await db.addMessage(message);
   res.redirect("/");
 };
 
-const getViewMessage = (req, res, next) => {
-  const message = messages.find(({ id }) => id === req.params.id);
+const getViewMessage = async (req, res, next) => {
+  const message = await db.getMessage(req.params.id);
 
   if (!message) {
     const err = new Error("Message not found");
